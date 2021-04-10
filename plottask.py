@@ -31,5 +31,5 @@ plt.legend()
 plt.show()
 
 # saving the plot
-plt.savefig('Random plot.png')
+plt.savefig('random_plot.png')
 
