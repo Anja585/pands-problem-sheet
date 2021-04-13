@@ -5,10 +5,11 @@
 # Author: Anja Antolkovic
 
 import datetime # importing datetime module to work with dates
-
 todayDate = datetime.datetime.now() # finding today's date
-todayDay = todayDate.strftime("%A") # using a method to format the date into a full version string 
-if todayDay == "Saturday" or "Sunday": # checking the condition
-    print("It is the weekend, yay!") # returing the statement if it's a weekend
-else: print("Yes, unfortunately today is a weekday") # returning a statement if it weekday
+todayDay = int(todayDate.strftime("%w")) # using a method to format the date into a number 
+if todayDay in range(1,6): # checking the condition
+    print("Yes, unfortunately today is a weekday") # returing the statement if it's a weekday
+else: print("It is the weekend, yay!") # returning a statement if it weekend
+
+
 
