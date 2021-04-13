@@ -27,9 +27,11 @@ plt.title("Random plot")
 # adding a legend
 plt.legend()
 
+# saving the plot
+plt.savefig('random_plot.png')
+
 # showing the plot
 plt.show()
 
-# saving the plot
-plt.savefig('random_plot.png')
+
 
