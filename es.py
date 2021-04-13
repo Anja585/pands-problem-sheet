@@ -6,7 +6,7 @@
 #         https://www.geeksforgeeks.org/how-to-use-sys-argv-in-python/     
 # Author: Anja Antolkovic
 
-# importing module to interact with the 
+# importing module to interact with the command line 
 import sys
 
 # defining the function
