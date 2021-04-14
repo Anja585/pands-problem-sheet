@@ -57,8 +57,8 @@ Program asks the user to enter positive integer number. While loop is used to pe
  4. Making a collatz program automate the boring stuff, Available at: https://stackoverflow.com/questions/33508034/making-a-collatz-program-automate-the-boring-stuff (Accessed: 13th March 2021).
  # Weekly Task 5
  *Write a program that outputs whether or not today is a weekday.*
- ```
-import datetime # importing datetime module to work with dates
+ ### Solution
+ ```import datetime # importing datetime module to work with dates
 todayDate = datetime.datetime.now() # finding today's date
 todayDay = int(todayDate.strftime("%w")) # using a method to format the date into a number 
 if todayDay in range(1,6): # checking the condition
@@ -71,8 +71,9 @@ This program prints out if today is a weekday or a weekend. Datetime module is u
  2. How do I get the day of week given a date?, Available at: https://stackoverflow.com/questions/9847213/how-do-i-get-the-day-of-week-given-a-date (Accessed: 14th March 2021).
  # Weekly Task 6
  *Write a program that takes a positive floating-point number as input and outputs an approximation of its square root.*
- ```
- # defining the function 
+### Solution
+
+ ``` # defining the function 
 def doSqrt(num):
     estimate = 1.0 # inital assumption of the square root  
     tolerance = 0.000001 # defining how much estimate can deviate from the real result  
@@ -99,8 +100,8 @@ Program asks the user to enter a positive number. Entered number is an argument 
 # Weekly Task 7
 *Write a program that reads in a text file and outputs the number of e's it contains.
 The program should take the filename from an argument on the command line.*
-```
-# importing module to interact with the commant line
+### Solution
+```# importing module to interact with the commant line
 import sys
 
 # defining the function
@@ -121,8 +122,8 @@ This program counts the number of 'e' letters in Moby-Dick. Letter 'e' is placed
 3. How to use sys.argv in Python, Available at: https://www.geeksforgeeks.org/how-to-use-sys-argv-in-python/ (Accessed: 4th April 2021).
 # Weekly Task 8
 *Write a program called plottask.py that displays a plot of the functions f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4] on the one set of axes.*
-
-
+### Solution
+![alt text](https://github.com/Anja585/pands-problem-sheet/blob/main/random_plot.png)
 ### References
 1. NumPy Array Indexing, Available at: https://www.w3schools.com/python/numpy/numpy_array_indexing.asp (Accessed: 10th April 2021).
 2. NumPy Creating Arrays, Available at: https://www.w3schools.com/python/numpy/numpy_creating_arrays.asp (Accessed: 10th April 2021).
