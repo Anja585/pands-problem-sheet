@@ -12,7 +12,8 @@ BMI1 = int(weight)/((int(height)/100)**2) # Calculates BMI to a float
 BMI2 = round (BMI1,2) # Rounds BMI to two decimal places
 print ("BMI is", BMI2) # prints the BMI
 ```
-Program asks the user to enter height and weight. Program then converts the data into an integers and performs the arithemtic operatins to get BMI. Function round() is used to round the result to 2 decimal places.  
+### Code explanation
+Program asks the user to enter height and weight. The program then converts the data into integers and performs the arithmetic operations to get BMI. Function round() is used to round the result to 2 decimal places.  
 ### References
 1. BMI Calculator, Available at: https://www.calculator.net/bmi-calculator.html (Accessed: 8th February 2021).
 2. Python round() Function, Available at: https://www.w3schools.com/python/ref_func_round.asp#:~:text=The%20round()%20function%20returns,will%20return%20the%20nearest%20integer. (Accessed: 8th February 2021).
@@ -24,6 +25,7 @@ Program asks the user to enter height and weight. Program then converts the data
 secondString = firstString[::-2] # -2 is a step size
 print(secondString) # printing out the string
 ```
+### Code explanation
 Program asks the user to enter a sentence. Program reverses the letters in a string and prints out every second letter; 'firstString[::-2]' is equivalent to 'firstString[0:len(firstString):-2]' where '2' denotes step size and '-' reverse order.  
 ### References
 1. Jake VanderPlas (2016) A Whirlwind tour of Python, First Edition edn., Sebastopol, CA: O'Reilly.
@@ -44,17 +46,19 @@ while number >= 1: # only work with integer numbers larger or equal to 1
    number = currentNumber # number changes its condition to current value
 print(*numbers) # unpacking numbers from the list
 ```
-Program asks the user to enter positive integer number. While loop is used to perform the calcutations on the number as follows:
+### Code explanation
+Program asks the user to enter a positive integer number. While loop is used to perform the calculations on the number as follows:
  * number is added to an empty list;
- * if statement is used to break the loop if the number is equal to 1 (if user enters 1, number is added to the list and while loop broken);
+ * if statement is used to break the loop if the number is equal to 1;
  * if statement is used to divide the number by 2 if the number is even;
  * else statement is used to multiply the number by 3 and add 1 if the number is odd;
- * condition is changed by assiging the number a new current value. 
+ * condition is changed by assigning a new current value to the number. 
  ### References
  1. Jake VanderPlas (2016) A Whirlwind tour of Python, First Edition edn., Sebastopol, CA: O'Reilly.
  2. Python While Loops, Available at: https://www.w3schools.com/python/python_while_loops.asp (Accessed: 13th March 2021)
  3. Python For Loops, Available at: https://www.w3schools.com/python/python_for_loops.asp (Accessed: 13th March 2021).
  4. Making a collatz program automate the boring stuff, Available at: https://stackoverflow.com/questions/33508034/making-a-collatz-program-automate-the-boring-stuff (Accessed: 13th March 2021).
+ 5. Unpacking Operators in Python, Available at: https://towardsdatascience.com/unpacking-operators-in-python-306ae44cd480 (Accessed: 13th March 2021).
  # Weekly Task 5
  *Write a program that outputs whether or not today is a weekday.*
  ### Solution
@@ -65,14 +69,14 @@ if todayDay in range(1,6): # checking the condition
     print("Yes, unfortunately today is a weekday") # returing the statement if it's a weekday
 else: print("It is the weekend, yay!") # returning a statement if it weekend
 ```
-This program prints out if today is a weekday or a weekend. Datetime module is used to find today's date and strftime() method to format today's day into a number (number 0-6, where 0 is Sunday). If statement checks if the todayDay (now formated into a number) falls into the range of numbers 1-5 which denote weekdays.  
+### Code explanation
+This program prints out if today is a weekday or a weekend. Datetime module is used to find today's date and strftime() method to format today's day into a number (0-6, where 0 is Sunday). If statement checks if the todayDay (now formated as a number) falls into the range of numbers [1,5] which denote weekdays.  
  ### References
  1. Python Datetime, Available at: https://www.w3schools.com/python/python_datetime.asp (Accessed: 14th March 2021).
  2. How do I get the day of week given a date?, Available at: https://stackoverflow.com/questions/9847213/how-do-i-get-the-day-of-week-given-a-date (Accessed: 14th March 2021).
  # Weekly Task 6
  *Write a program that takes a positive floating-point number as input and outputs an approximation of its square root.*
 ### Solution
-
  ``` # defining the function 
 def doSqrt(num):
     estimate = 1.0 # inital assumption of the square root  
@@ -89,8 +93,9 @@ num = float(input("Please enter a positive number: ")) # enter number here
 if num > 0: # checking the condition
     print("The square root of {} is approx. {}.".format(num, doSqrt(num)))
 ```
-Program asks the user to enter a positive number. Entered number is an argument in a function 'doSqrt' which calculates square root of the number:
-* we make an inital assumption of square root value, and we define the tolerance value (the value by which the real square root can deviate from the one calculated by a function);
+### Code explanation
+Program asks the user to enter a positive number. The entered number is an argument in a function 'doSqrt' which calculates the square root of the number:
+* we make an initial assumption of square root value, and we define the tolerance value (the value by which the real square root can deviate from the one calculated by a function);
 * Newton's iteration algorithm is used in a while loop to compute square root via recurrence equation √ N ≈ (N/A + A)/2. While loop is broked once if statement is true;
 * the solution is rounded to 1 decimal place.
 ### References
@@ -115,7 +120,8 @@ def countLetter(x): # passing letter x in the file as an argument
 count = countLetter("e")
 print(count) # print the number of counts
 ```
-This program counts the number of 'e' letters in Moby-Dick. Letter 'e' is placed as an argument in a function 'countLetter' once called. sys.argv() is an array for command line arguments in Python where file called has an index 0. Function takes a second argument (index 1) into account, in this case Moby-Dick text file. Program opens the text file in a read mode, count and returns the number of 'e' letters. 
+### Code explanation
+This program counts the number of 'e' letters in Moby-Dick. Letter 'e' is placed as an argument in a function 'countLetter' once called. sys.argv() is an array for command line arguments in Python where the file called has an index 0. Function takes a second argument (index 1) into account. The program opens the text file in a read mode, counts and returns the number of 'e' letters from the file. 
 ### References
 1. Python String count() Method, Available at: https://www.w3schools.com/python/ref_string_count.asp (Accessed: 4th April 2021).
 2. Python Command Line Arguments, Available at: https://realpython.com/python-command-line-arguments/ (Accessed: 4th April 2021).
@@ -123,10 +129,51 @@ This program counts the number of 'e' letters in Moby-Dick. Letter 'e' is placed
 # Weekly Task 8
 *Write a program called plottask.py that displays a plot of the functions f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4] on the one set of axes.*
 ### Solution
+```# import the modules
+import numpy as np
+import matplotlib.pyplot as plt
+
+# defining variables
+xpoints = np.array(range(0, 5))
+fxpoints = xpoints 
+gxpoints = xpoints * xpoints
+hxpoints = xpoints * xpoints * xpoints
+
+# plotting the function
+plt.plot(xpoints, fxpoints, color = 'r', label = "x")
+plt.plot(xpoints, gxpoints, color = 'b', label = "x squared")
+plt.plot(xpoints, hxpoints, color = "g", label = "x cubed")
+
+# labeling the plot
+plt.xlabel("x")
+plt.ylabel("y")
+
+# adding the title
+plt.title("Random plot")
+
+# adding a legend
+plt.legend()
+
+# saving the plot
+plt.savefig('random_plot.png')
+
+# showing the plot
+plt.show()
+```
 ![alt text](https://github.com/Anja585/pands-problem-sheet/blob/main/random_plot.png)
+### Code explanation
+* Numpy module is used to work with arrays and matplotlib module to work with plots.
+* First we are defining the variables; the range function is used to define the x points in the range [1,4].
+* plot() function is used to draw points in a diagram. By default, the plot() function draws a line from point to point.
+* Color argument is used to denote the color of the line, and label argument denotes what is being to the legend.
+* xlabel() and ylabel() functions to set a label for the x- and y-axis.
+* title() and legend() functions are used to set a title and a legend. 
+* savefig() function saves the plot as a png image. 
+* show() function graphically presents the plot.
 ### References
 1. NumPy Array Indexing, Available at: https://www.w3schools.com/python/numpy/numpy_array_indexing.asp (Accessed: 10th April 2021).
 2. NumPy Creating Arrays, Available at: https://www.w3schools.com/python/numpy/numpy_creating_arrays.asp (Accessed: 10th April 2021).
 3. Matplotlib Plotting, Available at: https://www.w3schools.com/python/matplotlib_plotting.asp (Accessed: 10th April 2021).
 4. Matplotlib Line, Available at: https://www.w3schools.com/python/matplotlib_line.asp (Accessed: 10th April 2021).
 5. Matplotlib Labels and Title, Available at: https://www.w3schools.com/python/matplotlib_labels.asp (Accessed: 10th April 2021).
+6. Matplotlib Pie Charts, Available at: https://www.w3schools.com/python/matplotlib_pie_charts.asp (Accessed: 10th April 2021).
